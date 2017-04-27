@@ -1,0 +1,9 @@
+name: scorystal
+version: 0.1.0
+
+authors:
+  - asaf schers <schers@riskified.com>
+
+crystal: 0.22.0
+
+license: MIT

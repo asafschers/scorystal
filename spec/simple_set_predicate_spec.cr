@@ -14,11 +14,11 @@ Spec2.describe SimpleSetPredicate do
     }
 
     it "returns true" do
-      expect(simple_set_predicate.true?({f36: "No Match"})).to eq(true)
+      expect(simple_set_predicate.true?({"f36" => "No Match"})).to eq(true)
     end
 
     it "returns false" do
-      expect(simple_set_predicate.true?({f36: "Match"})).to eq(false)
+      expect(simple_set_predicate.true?({"f36" => "Match"})).to eq(false)
     end
   end
 
@@ -29,11 +29,11 @@ Spec2.describe SimpleSetPredicate do
                        }
 
     it "returns true" do
-      expect(simple_set_predicate.true?({f36: "f2v2"})).to eq(true)
+      expect(simple_set_predicate.true?({"f36" => "f2v2"})).to eq(true)
     end
 
     it "returns false" do
-      expect(simple_set_predicate.true?({f36: "f2v4"})).to eq(false)
+      expect(simple_set_predicate.true?({"f36" => "f2v4"})).to eq(false)
     end
   end
 end

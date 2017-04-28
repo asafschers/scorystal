@@ -1,6 +1,6 @@
 # scorystal
 
-TODO: Write a description here
+Crystal Scoring API for PMML 
 
 ## Installation
 
@@ -9,7 +9,7 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   scorystal:
-    github: [your-github-name]/scorystal
+    github: asafschers/scorystal
 ```
 
 ## Usage

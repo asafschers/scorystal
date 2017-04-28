@@ -7,3 +7,8 @@ authors:
 crystal: 0.22.0
 
 license: MIT
+
+dependencies:
+  spec2:
+    github: waterlink/spec2.cr
+    version: ~> 0.9

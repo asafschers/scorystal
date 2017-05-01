@@ -7,12 +7,13 @@ class SimpleSetPredicate
   @array : Array(String)
 
   def initialize(pred_xml)
-    @field = pred_xml["field"] 
+    @field = pred_xml["field"]
     @operator = pred_xml["booleanOperator"]
     @array = single_or_quoted_words(pred_xml.content)
   end
 
   def true?(features)
+    return false if !features.has_key?(@field) || features[@field].nil?
     @array.includes? features[@field] if @operator == IS_IN
   end
 

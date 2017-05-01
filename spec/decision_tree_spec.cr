@@ -45,8 +45,8 @@ Spec2.describe DecisionTree do
     end
 
     it "nils" do
-      # expect(Scoruby.logger).to receive(:error).with("Null tree: 4, bad feature: f36")
-      # expect(decision_tree.decide({"f44" => 300, "f22" => 500})).to be_nil
+      #expect(Scoruby.logger).to receive(:error).with("Null tree: 4, bad feature: f36")
+      expect(decision_tree.decide({"f44" => 300, "f22" => 500})).to be_nil
     end
   end
 
@@ -82,10 +82,10 @@ Spec2.describe DecisionTree do
         expect(decision_tree.decide(features)).to eq "4.3463944950723456E-4"
       end
 
-      # it "f2 first true" do
-      #   features = { "f2" => "f2v1" }
-      #   expect(decision_tree.decide(features)).to eq "-1.8361380219689046E-4"
-      # end
+      it "f2 first true" do
+        features = { "f2" => "f2v1" }
+        expect(decision_tree.decide(features)).to eq "-1.8361380219689046E-4"
+      end
 
       it "f1 and f2 first true" do
         features = {"f2" => "f2v1", "f1" => "f1v3" }
@@ -122,11 +122,11 @@ Spec2.describe DecisionTree do
         expect(decision_tree.decide(features)).to eq "0.0022726641744997256"
       end
 
-      # it "f2 none are true" do
-      #   features = { f2: "f2v9" }
-      #   expect(Scoruby.logger).to receive(:error).with("Null tree: 2532, bad feature: f2")
-      #   expect(decision_tree.decide(features)).to be_nil
-      # end
+      it "f2 none are true" do
+        features = { "f2" => "f2v9" }
+        #expect(Scoruby.logger).to receive(:error).with("Null tree: 2532, bad feature: f2")
+        expect(decision_tree.decide(features)).to be_nil
+      end
     end
   end
 end

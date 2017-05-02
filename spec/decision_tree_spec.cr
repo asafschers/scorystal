@@ -1,5 +1,6 @@
 require "./spec_helper"
 require "spec2"
+require "spec2-mocks"
 
 Spec2.describe DecisionTree do
 
@@ -45,7 +46,8 @@ Spec2.describe DecisionTree do
     end
 
     it "nils" do
-      #expect(Scoruby.logger).to receive(:error).with("Null tree: 4, bad feature: f36")
+        #expect(Scorystal.logger).to receive(error(%(Null tree: 4, bad feature: <SimpleSetPredicate field="f36" booleanOperator="isIn">
+        #                                            <Array n="6" type="string">"F"   "F1L"   "F1L1"   "FL"   "FL1"   "L"</Array>)))
       expect(decision_tree.decide({"f44" => 300, "f22" => 500})).to be_nil
     end
   end
@@ -124,7 +126,7 @@ Spec2.describe DecisionTree do
 
       it "f2 none are true" do
         features = { "f2" => "f2v9" }
-        #expect(Scoruby.logger).to receive(:error).with("Null tree: 2532, bad feature: f2")
+        #expect(Scorystal.logger).to receive(error(%(Null tree: 2532, bad feature: <SimplePredicate field="f2" operator="isMissing"/>)))
         expect(decision_tree.decide(features)).to be_nil
       end
     end

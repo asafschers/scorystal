@@ -1,4 +1,6 @@
-# scorystal
+[![Build Status](https://travis-ci.org/asafschers/scorystal.svg?branch=master)](https://travis-ci.org/asafschers/scorystal)
+
+# Scorystal
 
 Crystal Scoring API for PMML 
 
@@ -26,7 +28,7 @@ TODO: Write development instructions here
 
 ## Contributing
 
-1. Fork it ( https://github.com/[your-github-name]/scorystal/fork )
+1. Fork it ( https://github.com/asafschers/scorystal/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
@@ -34,4 +36,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [[your-github-name]](https://github.com/[your-github-name]) asaf schers - creator, maintainer
+- [[asafschers]](https://github.com/asafschers) asaf schers - creator, maintainer

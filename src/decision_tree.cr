@@ -1,3 +1,5 @@
+require "logger"
+
 class DecisionTree
 
   getter :root
@@ -36,7 +38,7 @@ class DecisionTree
 
   private def didnt_step?(curr, prev)
     return false if (prev.predicate != curr.predicate)
-    p "Null tree: #{@id}, bad feature: #{curr.children[0].predicate_string }"
+    Scorystal.logger.error("Null tree: #{@id}, bad feature: #{curr.children[0].predicate_string }")
     true
   end
 end

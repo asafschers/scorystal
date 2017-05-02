@@ -1,5 +1,7 @@
 require "./scorystal/*"
 
 module Scorystal
-  # TODO Put your code here
+
+  class_property  logger = Logger.new(STDOUT)
+
 end

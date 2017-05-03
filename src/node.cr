@@ -3,14 +3,9 @@ class Node
   getter :children, :predicate_string, :decision, :predicate
 
   @predicate : ((SimplePredicate | SimpleSetPredicate | DummyPredicate))
-  @children : (Array(Node))
-  @decision : String?
-  @predicate_string : String?
-
-  def initialize(xml : Nil)
-    @children = Array(Node).new
-    @predicate = DummyPredicate.new
-  end
+  @children : Array(Node)
+  @decision : String
+  @predicate_string : String
 
   def initialize(xml : XML::Node)
     children = xml.children

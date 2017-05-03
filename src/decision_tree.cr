@@ -9,7 +9,12 @@ class DecisionTree
 
   def initialize(tree_xml)
     @id = tree_xml["id"]
-    @root = Node.new(tree_xml.xpath_node("TreeModel/Node"))
+    root_xml = tree_xml.xpath_node("TreeModel/Node")
+    if root_xml
+      @root = Node.new(root_xml)
+    else
+      raise "Bad tree xml: #{id}"
+    end
   end
 
   def decide(features)

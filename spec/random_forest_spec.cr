@@ -1,4 +1,3 @@
-require "./spec_helper"
 require "spec2"
 
 Spec2.describe RandomForest do
@@ -7,7 +6,7 @@ Spec2.describe RandomForest do
 
   let(:rf_file) { "spec/pmmls/rf_file.pmml" }
   let(:rf_text) { File.read(rf_file) }
-  let(:xml) { XML.parse(rf_text, XML::ParserOptions::NOBLANKS || XML::ParserOptions.default || XML::ParserOptions::NSCLEAN) }
+  let(:xml) { XML.parse(rf_text, XML::ParserOptions::NOBLANKS) }
   let(:random_forest) { RandomForest.new(xml) }
 
   def categorial_features

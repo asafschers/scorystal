@@ -20,7 +20,6 @@ class SimplePredicate
   end
 
   def true?(features)
-
     return !features.has_key?(@field) || features[@field].nil?  if @operator == IS_MISSING
     return false if !features.has_key?(@field) || features[@field].nil?
     return num_true?(features[@field]) if MATH_OPS.includes?(@operator)
@@ -28,8 +27,12 @@ class SimplePredicate
     return false
   end
 
-  def num_true?(feature : Nil | String)
+  def num_true?(feature : Nil)
     false
+  end
+
+  def num_true?(feature : String)
+    num_true?(feature.to_f) if feature.to_f?
   end
 
   def num_true?(feature : Int32 | Float64)

@@ -13,7 +13,7 @@ class DecisionTree
     if root_xml
       @root = Node.new(root_xml)
     else
-      raise "Bad tree xml: #{id}"
+      raise "Bad tree xml: #{@id}"
     end
   end
 

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-   <PMML xmlns="http://www.dmg.org/PMML-4_2" version="4.2">
+   <PMML  version="4.2">
+  <!-- <PMML xmlns="http://www.dmg.org/PMML-4_2" version="4.2"> -->
    	<Header>
    		<Application name="JPMML-R" version="1.1-SNAPSHOT"/>
    		<Timestamp>2017-02-06T15:24:37Z</Timestamp>

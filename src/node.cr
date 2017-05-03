@@ -9,7 +9,7 @@ class Node
 
   def initialize(xml : Nil)
     @children = Array(Node).new
-    @predicate = DummyPredicate.new(nil)
+    @predicate = DummyPredicate.new
   end
 
   def initialize(xml : XML::Node)
@@ -31,10 +31,10 @@ class Node
   end
 
   private def predicate(children)
-    return DummyPredicate.new(nil) if children.size == 0
+    return DummyPredicate.new if children.size == 0
     pred_xml = children[0]
     return SimplePredicate.new(pred_xml) if pred_xml.name == "SimplePredicate"
     return SimpleSetPredicate.new(pred_xml) if pred_xml.name == "SimpleSetPredicate"
-    return DummyPredicate.new(pred_xml)
+    return DummyPredicate.new
   end
 end

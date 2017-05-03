@@ -1,6 +1,6 @@
 class DummyPredicate
 
-  def initialize(pred_xml)
+  def initialize
 
   end
 

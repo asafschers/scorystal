@@ -29,6 +29,6 @@ Spec2.describe Gbm do
   end
 
   it "predicts decline" do
-    # expect(gbm.score(decline_features)).to eq 0.48682675281447374
+    expect(gbm.score(decline_features)).to eq 0.48682675281447374
   end
 end

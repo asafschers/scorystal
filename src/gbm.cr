@@ -1,3 +1,5 @@
+require "./decision_tree"
+
 class Gbm
   GBM_FOREST_XPATH = %(//Segmentation[@multipleModelMethod="sum"])
   CONST_XPATH      = %(//Constant[@dataType="double"])
@@ -31,7 +33,7 @@ class Gbm
       if score
         score.to_f
       else
-        raise("Non float score for GBM")  
+        raise("Non float score for GBM")
       end
     } + @const
     Math.exp(x) / (1 + Math.exp(x))

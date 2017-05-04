@@ -1,3 +1,7 @@
+require "./simple_predicate"
+require "./simple_set_predicate"
+require "./dummy_predicate"
+
 class Node
 
   getter :children, :predicate_string, :decision, :predicate

@@ -37,7 +37,7 @@ features = Scorystal.features_hash(json)
 # Gradient Boosted Model
 
 gbm = Gbm.new(parsed_pmml)
-gbm.score(features)
+puts gbm.score(features)
 
 # Random Forest
 
@@ -45,10 +45,6 @@ rf = RandomForest.new(parsed_pmml)
 puts rf.decisions_count(features)
 
 ```
-
-## Development
-
-TODO: Write development instructions here
 
 ## Contributing
 
